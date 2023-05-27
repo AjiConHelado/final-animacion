@@ -9,7 +9,7 @@ public class ConstrainControl : MonoBehaviour
     [SerializeField] MultiParentConstraint[] animateBones;
     [SerializeField] MultiParentConstraint[] proceduralBones;
 
-    private void UpdateInfuelnce(float weight)
+    public void UpdateInfuelnce(float weight)
     {
         if (animateBones == null) return;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
-public class SimpleMovement : MonoBehaviour
+public class SimpleMovement2 : MonoBehaviour
 {
     [SerializeField] private Transform gCheckOrigin, gCheckOrigin2, gCheckOrigin3, mesh;
     [SerializeField] private float gCheckDistance = 0.5f, gMultiplier = 2f, speed = 7f, jumpForce = 30f;
@@ -55,7 +55,7 @@ public class SimpleMovement : MonoBehaviour
         
         JumpDetection();
         
-        RotatePlayer();
+       RotatePlayer();
 
         ApplyDrag();
         
@@ -102,13 +102,13 @@ public class SimpleMovement : MonoBehaviour
 
     private void InputDetection()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal2");
         vertical = Input.GetAxisRaw("Vertical");
     }
 
     private void JumpDetection()
     {
-        if (Input.GetKeyDown("up") && grounded)
+        if (Input.GetKeyDown("w") && grounded)
         {
             Jump();
         }
@@ -130,7 +130,7 @@ public class SimpleMovement : MonoBehaviour
         {
             rot.eulerAngles = new Vector3(0, 90, 0);
             transform.rotation = rot;
-            //mesh.localScale = new Vector3(-1, 1, 1); 
+           // mesh.localScale = new Vector3(-1, 1, 1); 
         }
         else if(horizontal < 0)
         {

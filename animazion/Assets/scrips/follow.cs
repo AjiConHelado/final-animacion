@@ -9,7 +9,7 @@ public class follow : MonoBehaviour
  
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targ.transform.position, .03f);
+        transform.position = Vector3.MoveTowards(transform.position, targ.transform.position, .2f);
     }
 
 }
